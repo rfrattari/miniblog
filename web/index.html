@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="MiModulo">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv='cache-control' content='no-cache'>
+    <meta http-equiv='expires' content='0'>
+    <meta http-equiv='pragma' content='no-cache'>
+    <title>Miniblog</title>
+    
+    <link rel="stylesheet" href="app/css/bootstrap.min.css">
+    <script src="app/js/moment.js"></script>
+    <script src="app/js/html2canvas.js"></script>
+    <script src="app/js/jspdf.js"></script>
+    <script src="app/js/jquery-3.3.1.js"></script>
+    <script src="app/js/angular.min.js"></script>
+    <script src="app/js/angular-route.js"></script>
+    <link rel="stylesheet" href="app/css/ng-table.min.css">
+    <script src="app/js/ng-table.min.js"></script>
+    <script src="app/js/cookies.js"></script>
+    <script src="app/modulos/rutas/rutas.js" type="text/javascript"></script>
+    <script src="app/modulos/modulo-posts/frontend/posts-frontend.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="app/css/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="app/css/style.css">
+  </head>
+  <body>
+    
+<div ng-show="loading" class="col-md-3">
+<div style="position:fixed;left:45.1%; margin-top:170px; z-index:9999;"> 
+    <span show-during-resolve class="fa fa-spinner fa-4x loading-icon loader"></span>
+ </div>  
+</div>  
+
+  <ng-view></ng-view>
+   
+
+
+  </body>
+</html>
+

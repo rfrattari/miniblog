@@ -1,0 +1,31 @@
+@-webkit-keyframes webkit-spin {
+  from {
+    -webkit-transform: scale(1) rorate(0deg);
+  }
+  to {
+    -webkit-transform: scale(1) rotate(359deg);
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.loading-icon {
+  -ms-animation: spin .7s infinite linear;
+  -moz-animation: spin .7s infinite linear;
+  -webkit-animation: webkit-spin .7s infinite linear;
+  top: 2px;
+  margin-left: 7px;
+}
+
+.barra { 
+  float: left;
+  margin-left:85%;
+  display:scroll; position:fixed; top:0px;
+background-color: #EBE9EA;
+    border: 1px solid #D2D2D2;
+    border-radius: 8px 8px 8px 8px; }

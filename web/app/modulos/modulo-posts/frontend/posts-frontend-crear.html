@@ -1,0 +1,21 @@
+<div class="panel panel-default">
+  <div class="panel-heading">Posts</div>
+  <div class="panel-body">
+<form id="frmdataposts" name="frmdataposts" novalidate>
+<div class="form-group" ng-class="{ 'has-error' : frmdataposts.posts.posts_titulo.$invalid && !frmdataposts.posts.posts_titulo.$pristine }">
+<label>Titulo</label>
+<input type="text" name="posts_titulo" ng-model="posts.posts_titulo" class="form-control" ng-disabled="btnposts=='Ver' || btnposts=='Eliminar'" required>
+<p ng-show="frmdataposts.posts.posts_titulo.$invalid && !frmdataposts.posts.posts_titulo.$pristine" class="help-block">El Titulo es requerido.</p>
+</div>
+<div class="form-group" ng-class="{ 'has-error' : frmdataposts.posts.posts_descripcion.$invalid && !frmdataposts.posts.posts_descripcion.$pristine }">
+<label>Descripcion</label>
+<textarea type="text" name="posts_descripcion" ng-model="posts.posts_descripcion" class="form-control" ng-disabled="btnposts=='Ver' || btnposts=='Eliminar'" required></textarea>
+<p ng-show="frmdataposts.posts.posts_descripcion.$invalid && !frmdataposts.posts.posts_descripcion.$pristine" class="help-block">La descripcion es requerida.</p>
+</div>
+<input type="hidden" ng-model="posts.posts_pk">
+<a class="btn btn-warning" href="#" onclick="setTimeout(function(){window.location.reload();});">Cerrar</a>
+<button type="submit" class="btn btn-primary" ng-if="btnposts=='Editar' || btnposts=='Crear'" ng-click="btnposts=='Editar'?editarFormposts(frmdataposts.$valid):crearFormposts(frmdataposts.$valid)" ng-disabled="frmdataposts.$invalid">{{btnposts}}</button>
+<button type="submit" class="btn btn-primary" ng-if="btnposts=='Eliminar'" ng-click="eliminarFormposts()" ng-disabled="frmdataposts.$invalid">{{btnposts}}</button>
+</form>
+</div>
+</div>
